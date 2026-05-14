@@ -1,0 +1,15 @@
+services:
+  oracle-xe:
+    image: gvenzl/oracle-xe:21-slim-faststart
+    container_name: telco-oracle
+    ports:
+      - "1521:1521"
+    environment:
+      ORACLE_PASSWORD: Oracle12345
+    volumes:
+      - oracle-data:/opt/oracle/oradata
+      - ./docker/init:/container-entrypoint-initdb.d:ro
+      - .:/workspace:ro
+
+volumes:
+  oracle-data:

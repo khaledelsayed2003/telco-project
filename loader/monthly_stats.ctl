@@ -1,0 +1,15 @@
+OPTIONS (SKIP=1)
+LOAD DATA
+CHARACTERSET AL32UTF8
+INFILE '/workspace/MONTHLY_STATS.csv'
+INSERT
+INTO TABLE monthly_stats
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' TRAILING NULLCOLS
+(
+   id             INTEGER EXTERNAL,
+   customer_id    INTEGER EXTERNAL,
+   data_usage     DECIMAL EXTERNAL,
+   minute_usage   INTEGER EXTERNAL,
+   sms_usage      INTEGER EXTERNAL,
+   payment_status CHAR(20) "REPLACE(TRIM(:payment_status), CHR(13), '')"
+)

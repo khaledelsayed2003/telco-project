@@ -117,3 +117,13 @@ You must write SQL queries to address the scenarios listed below. For each query
 * Pay close attention to applying the appropriate data types and constraints when creating your tables.
 * You may use DBeaver or SQL*Plus to handle the `.csv` data imports into Oracle XE.
 * Thoroughly test each query and document both the SQL statement and its resulting output in your submission.
+
+---
+
+## Solution Files
+
+* `TABLE_CREATION_SCRIPTS.sql` contains the Oracle table creation script, constraints, and indexes.
+* `SOLUTIONS.sql` contains the required SQL answers with explanation comments.
+* `docker-compose.yml` starts the Oracle XE environment for this project.
+* `SETUP_STEPS.md` explains how to run Oracle XE, import the CSV files, connect with DBeaver, and submit the repository.
+* `QUERY_RESULTS.md` documents expected row counts and sample outputs for the required queries.
